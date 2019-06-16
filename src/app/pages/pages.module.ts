@@ -7,12 +7,14 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CvComponent } from './cv/cv.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   declarations: [HomeComponent, AboutComponent, ContactComponent, CvComponent, PageNotFoundComponent],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    TranslateModule
   ]
 })
 export class PagesModule { }

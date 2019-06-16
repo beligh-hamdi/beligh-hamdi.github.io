@@ -3,7 +3,7 @@
 }
 
 .sidenav {
-  width: 200px;
+  width: 220px;
 }
 
 /*
@@ -30,7 +30,7 @@
 
 .nav-link {
   cursor: pointer;
-  margin: 0 16px 0 0;
+  margin: 0 5px 0 0;
   padding: 21px 0;
 }
 
@@ -40,4 +40,8 @@
   top: 12px;
   height: 40px;
   border-radius: 50%;
+}
+
+.app-fill-remaining-space {
+  flex: 1 1 auto;
 }

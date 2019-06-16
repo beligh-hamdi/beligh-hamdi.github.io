@@ -4,9 +4,9 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <div *ngIf="(isHandset$ | async)">
-      <mat-toolbar color="primary">
+      <mat-toolbar color="primary" [ngStyle]="{'background': currentRoute?.class }">
         <a routerLink="/home" class="nav-link home">
-          <img src="assets/img/beligh100x100.png" title="Beligh HAMDI" alt="Beligh HAMDI">
+          <img src="assets/img/beligh50x50.png" title="Beligh HAMDI" alt="Beligh HAMDI">
         </a>
         <span>Beligh HAMDI</span>
       </mat-toolbar>
@@ -27,7 +27,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" [ngStyle]="{'background': currentRoute?.class }">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -36,9 +36,35 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <a routerLink="/home" class="nav-link home">
-        <img src="assets/img/beligh100x100.png" title="Beligh HAMDI" alt="Beligh HAMDI">
+        <img src="assets/img/beligh50x50.png" title="Beligh HAMDI" alt="Beligh HAMDI">
       </a>
       <span>Beligh HAMDI</span>
+      <span class="app-fill-remaining-space"></span>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="menuLanguages">
+          <mat-icon>translate</mat-icon>
+          <span>Languages</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications</mat-icon>
+          <span>Alerts</span>
+        </button>
+      </mat-menu>
+
+      <mat-menu #menuLanguages="matMenu">
+        <button mat-menu-item (click)="translate.use('fr')" [disabled]="'fr' === translate.currentLang">
+          <span>Français</span>
+        </button>
+        <button mat-menu-item (click)="translate.use('en')" [disabled]="'en' === translate.currentLang">
+          <span>English</span>
+        </button>
+      </mat-menu>
+
     </mat-toolbar>
     <main class="sidenav-content" role="main">
       <router-outlet></router-outlet>

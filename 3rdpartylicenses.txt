@@ -68,6 +68,8 @@ THE SOFTWARE.
 
 @angular/material/list
 
+@angular/material/menu
+
 @angular/material/sidenav
 
 @angular/material/toolbar
@@ -76,6 +78,12 @@ THE SOFTWARE.
 MIT
 
 @angular/router
+MIT
+
+@ngx-translate/core
+MIT
+
+@ngx-translate/http-loader
 MIT
 
 hammerjs
