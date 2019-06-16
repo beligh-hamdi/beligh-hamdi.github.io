@@ -1,0 +1,43 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+/*
+.sidenav .mat-toolbar {
+ background: inherit;
+
+}
+*/
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.sidenav-content {
+  min-height: 100vh;
+  padding: 5px 3rem 2rem;
+}
+
+.active {
+  color: #3f51b5;
+}
+
+.nav-link {
+  cursor: pointer;
+  margin: 0 16px 0 0;
+  padding: 21px 0;
+}
+
+.nav-link.home img {
+  position: relative;
+  margin-top: -21px;
+  top: 12px;
+  height: 40px;
+  border-radius: 50%;
+}

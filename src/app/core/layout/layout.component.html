@@ -1,0 +1,47 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <div *ngIf="(isHandset$ | async)">
+      <mat-toolbar color="primary">
+        <a routerLink="/home" class="nav-link home">
+          <img src="assets/img/beligh100x100.png" title="Beligh HAMDI" alt="Beligh HAMDI">
+        </a>
+        <span>Beligh HAMDI</span>
+      </mat-toolbar>
+    </div>
+    <div *ngIf="(isHandset$ | async) === false">
+      <mat-toolbar color="primary" [ngStyle]="{'background': currentRoute?.class }">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button>
+          <mat-icon aria-label="Side nav toggle icon">{{currentRoute?.icon}}</mat-icon>
+        </button>
+        <span>{{ currentRoute?.title }}</span>
+      </mat-toolbar>
+    </div>
+    <mat-nav-list>
+      <a *ngFor="let item of links" mat-list-item [routerLink]="item.path" routerLinkActive="active">
+        <mat-icon matListIcon>{{item.icon}}</mat-icon>
+        {{item.title}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a routerLink="/home" class="nav-link home">
+        <img src="assets/img/beligh100x100.png" title="Beligh HAMDI" alt="Beligh HAMDI">
+      </a>
+      <span>Beligh HAMDI</span>
+    </mat-toolbar>
+    <main class="sidenav-content" role="main">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
