@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -36,6 +36,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatListModule,
     MatMenuModule,
     MatSelectModule,
+
+    FlexLayoutModule,
 
     HttpClientModule,
     TranslateModule.forRoot({

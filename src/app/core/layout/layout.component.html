@@ -6,9 +6,9 @@
     <div *ngIf="(isHandset$ | async)">
       <mat-toolbar color="primary" [ngStyle]="{'background': currentRoute?.class }">
         <a routerLink="/home" class="nav-link home">
-          <img src="assets/img/beligh50x50.png" title="Beligh HAMDI" alt="Beligh HAMDI">
+          <img [src]="logo" title="Beligh HAMDI" alt="Beligh HAMDI">
         </a>
-        <span>Beligh HAMDI</span>
+        <span>{{ title }}</span>
       </mat-toolbar>
     </div>
     <div *ngIf="(isHandset$ | async) === false">
@@ -16,13 +16,13 @@
         <button type="button" aria-label="Toggle sidenav" mat-icon-button>
           <mat-icon aria-label="Side nav toggle icon">{{currentRoute?.icon}}</mat-icon>
         </button>
-        <span>{{ currentRoute?.title }}</span>
+        <span>{{ currentRoute?.title18n | translate }}</span>
       </mat-toolbar>
     </div>
     <mat-nav-list>
       <a *ngFor="let item of links" mat-list-item [routerLink]="item.path" routerLinkActive="active">
         <mat-icon matListIcon>{{item.icon}}</mat-icon>
-        {{item.title}}
+        <span>{{ item?.title18n | translate }}</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>
@@ -36,9 +36,9 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <a routerLink="/home" class="nav-link home">
-        <img src="assets/img/beligh50x50.png" title="Beligh HAMDI" alt="Beligh HAMDI">
+        <img [src]="logo" title="Beligh HAMDI" alt="Beligh HAMDI">
       </a>
-      <span>Beligh HAMDI</span>
+      <span>{{ title }}</span>
       <span class="app-fill-remaining-space"></span>
 
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
@@ -48,25 +48,28 @@
       <mat-menu #menu="matMenu">
         <button mat-menu-item [matMenuTriggerFor]="menuLanguages">
           <mat-icon>translate</mat-icon>
-          <span>Languages</span>
+          <span>{{ 'LAYOUT.LANGUAGES' | translate }}</span>
         </button>
         <button mat-menu-item>
           <mat-icon>notifications</mat-icon>
-          <span>Alerts</span>
+          <span>{{ 'LAYOUT.ALERTS' | translate }}</span>
         </button>
       </mat-menu>
 
       <mat-menu #menuLanguages="matMenu">
         <button mat-menu-item (click)="translate.use('fr')" [disabled]="'fr' === translate.currentLang">
-          <span>Français</span>
+          <mat-icon svgIcon="flag-france" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+          <span>{{ 'LAYOUT.FRENCH' | translate }}</span>
         </button>
         <button mat-menu-item (click)="translate.use('en')" [disabled]="'en' === translate.currentLang">
-          <span>English</span>
+          <mat-icon svgIcon="flag-united-kingdom" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+          <span>{{ 'LAYOUT.ENGLISH' | translate }}</span>
         </button>
       </mat-menu>
 
     </mat-toolbar>
     <main class="sidenav-content" role="main">
+
       <router-outlet></router-outlet>
     </main>
   </mat-sidenav-content>

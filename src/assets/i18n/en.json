@@ -1,6 +1,17 @@
 {
   "HOME": {
-    "TITLE": "Hello Angular with ngx-translate!",
-    "SELECT": "Change language"
+    "TITLE": "Welcome"
+  },
+  "MENU": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "CONTACT": "Contact",
+    "CV": "CV"
+  },
+  "LAYOUT": {
+    "LANGUAGES": "Languages",
+    "ALERTS": "Alerts",
+    "FRENCH": "French",
+    "ENGLISH": "English"
   }
 }
