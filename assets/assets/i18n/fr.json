@@ -1,0 +1,17 @@
+{
+  "HOME": {
+    "TITLE": "Binevenue"
+  },
+  "MENU": {
+    "HOME": "Accueil",
+    "ABOUT": "A Propos",
+    "CONTACT": "Contact",
+    "CV": "CV"
+  },
+  "LAYOUT": {
+    "LANGUAGES": "Langues",
+    "ALERTS": "Alertes",
+    "FRENCH": "Français",
+    "ENGLISH": "Anglais"
+  }
+}

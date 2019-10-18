@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import {Router} from '@angular/router';
+import {Event, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router} from '@angular/router';
 import { Location } from '@angular/common';
 import {TranslateService} from '@ngx-translate/core';
 import {CoreService} from '../services/core.service';
@@ -16,7 +16,7 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-
+  loading = false;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
@@ -57,15 +57,32 @@ export class LayoutComponent implements OnInit {
   }
 
   private routerEvent() {
-    this.router.events.subscribe(val => {
+    this.router.events.subscribe((event: Event) => {
       if (this.location.path() !== '') {
         this.currentRoute =  this.links.find(item => {
-           return item.path === this.location.path();
+          return item.path === this.location.path();
         });
       } else {
         this.currentRoute = this.links.find(item => {
           return item.title === 'Home';
         });
+      }
+
+      switch (true) {
+        case event instanceof NavigationStart: {
+          this.loading = true;
+          break;
+        }
+
+        case event instanceof NavigationEnd:
+        case event instanceof NavigationCancel:
+        case event instanceof NavigationError: {
+          this.loading = false;
+          break;
+        }
+        default: {
+          break;
+        }
       }
     });
   }

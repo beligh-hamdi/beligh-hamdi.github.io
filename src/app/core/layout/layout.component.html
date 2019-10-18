@@ -18,6 +18,7 @@
         </button>
         <span>{{ currentRoute?.title18n | translate }}</span>
       </mat-toolbar>
+      <mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"></mat-progress-bar>
     </div>
     <mat-nav-list>
       <a *ngFor="let item of links" mat-list-item [routerLink]="item.path" routerLinkActive="active">
@@ -68,8 +69,8 @@
       </mat-menu>
 
     </mat-toolbar>
+    <mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"></mat-progress-bar>
     <main class="sidenav-content" role="main">
-
       <router-outlet></router-outlet>
     </main>
   </mat-sidenav-content>

@@ -5,14 +5,17 @@ import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
 import {CvComponent} from './cv/cv.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {SkillListResolver} from '../core/services/skill-list.resolver';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'cv', component: CvComponent },
-  { path: '',  redirectTo: '/home', pathMatch: 'full'
+  { path: 'cv',
+    component: CvComponent,
+    resolve: { skills : SkillListResolver }
   },
+  { path: '',  redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

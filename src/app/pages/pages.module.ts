@@ -8,7 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CvComponent } from './cv/cv.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {TranslateModule} from '@ngx-translate/core';
-import {MatCardModule} from '@angular/material';
+import {MatCardModule, MatListModule} from '@angular/material';
 
 @NgModule({
   declarations: [HomeComponent, AboutComponent, ContactComponent, CvComponent, PageNotFoundComponent],
@@ -17,7 +17,8 @@ import {MatCardModule} from '@angular/material';
     PagesRoutingModule,
     TranslateModule,
 
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ]
 })
 export class PagesModule { }
