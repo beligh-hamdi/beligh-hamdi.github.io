@@ -1,0 +1,68 @@
+<app-header-page title="MENU.BLOG"></app-header-page>
+
+<section class="main-panel-static">
+    <div infiniteScroll
+         [infiniteScrollDistance]="2"
+         [infiniteScrollThrottle]="50"
+         [infiniteScrollContainer]="'.main-panel-static'"
+         [fromRoot]="true"
+         (scrolled)="onScrollStatic()">
+    </div>
+
+    <app-under-construction>></app-under-construction>
+
+    <mat-card class="app-card" *ngFor="let post of staticPosts">
+      <mat-card-header>
+        <mat-card-title>{{ post.id }} - {{ post.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content [innerHTML]="post.body"></mat-card-content>
+    </mat-card>
+
+    <div class="loading">
+      <ngx-loading [show]="status.isLoadingStaticPosts"></ngx-loading>
+    </div>
+
+    <mat-card class="app-card">
+      <mat-card-actions>
+        <button mat-raised-button (click)="onScrollStatic()" [disabled]="staticPosts.length >= maxStaticPages">
+          <mat-icon aria-hidden="false" aria-label="more">loop</mat-icon>
+          <span>{{ 'LOAD.MORE' | translate }}</span>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+</section>
+
+<!--
+<section>
+  <mat-card class="app-card">
+    <mat-card-header>
+      <mat-card-title>Posts API</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="main-panel">
+        <div infiniteScroll
+             [infiniteScrollDistance]="2"
+             [infiniteScrollThrottle]="50"
+             [infiniteScrollContainer]="'.main-panel'"
+             [fromRoot]="true"
+             (scrolled)="onScroll()"
+        ></div>
+        <div *ngFor="let post of posts">
+          <h3>{{ post.id }} - {{ post.title }}</h3>
+          <p [innerHTML]="post.body"></p>
+        </div>
+        <div class="loading">
+          <ngx-loading [show]="status.isLoadingPosts" [config]=""></ngx-loading>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="onScroll()" [disabled]="posts.length >= totalCount">
+        <mat-icon aria-hidden="false" aria-label="more">loop</mat-icon>
+        <span>{{ 'LOAD.MORE' | translate }}</span>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</section>
+
+-->

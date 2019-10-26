@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -28,13 +29,17 @@ export class LayoutComponent implements OnInit {
   title: string;
   logo: string;
 
+  fullScreen = false;
+  elem;
+
   constructor(private breakpointObserver: BreakpointObserver,
               private location: Location,
               private router: Router,
               public translate: TranslateService,
               private coreService: CoreService,
               iconRegistry: MatIconRegistry,
-              sanitizer: DomSanitizer) {
+              sanitizer: DomSanitizer,
+              @Inject(DOCUMENT) private document: any) {
     this.routerEvent();
     this.initTranslate();
 
@@ -46,6 +51,7 @@ export class LayoutComponent implements OnInit {
       'flag-france',
       sanitizer.bypassSecurityTrustResourceUrl('assets/img/flags/france-flag.svg'));
 
+    this.elem = document.documentElement;
   }
 
   ngOnInit(): void {
@@ -54,6 +60,38 @@ export class LayoutComponent implements OnInit {
         this.title = data.title;
         this.logo = data.logo;
     });
+  }
+
+  toggleFullscreen(): void {
+    if (!this.fullScreen) {
+      this.fullScreen = true;
+      if (this.elem.requestFullscreen) {
+        this.elem.requestFullscreen();
+      } else if (this.elem.mozRequestFullScreen) {
+        /* Firefox */
+        this.elem.mozRequestFullScreen();
+      } else if (this.elem.webkitRequestFullscreen) {
+        /* Chrome, Safari and Opera */
+        this.elem.webkitRequestFullscreen();
+      } else if (this.elem.msRequestFullscreen) {
+        /* IE/Edge */
+        this.elem.msRequestFullscreen();
+      }
+    } else {
+      this.fullScreen = false;
+      if (this.document.exitFullscreen) {
+        this.document.exitFullscreen();
+      } else if (this.document.mozCancelFullScreen) {
+        /* Firefox */
+        this.document.mozCancelFullScreen();
+      } else if (this.document.webkitExitFullscreen) {
+        /* Chrome, Safari and Opera */
+        this.document.webkitExitFullscreen();
+      } else if (this.document.msExitFullscreen) {
+        /* IE/Edge */
+        this.document.msExitFullscreen();
+      }
+    }
   }
 
   private routerEvent() {

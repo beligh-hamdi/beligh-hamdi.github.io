@@ -8,11 +8,17 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class CvComponent implements OnInit {
   skills: string[];
+  loading = true;
+
+  panelOpenState = false;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.skills = this.activatedRoute.snapshot.data.skills;
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
   }
 
 }

@@ -6,6 +6,7 @@
     "HOME": "Home",
     "ABOUT": "About",
     "CONTACT": "Contact",
+    "BLOG": "Blog",
     "CV": "CV"
   },
   "LAYOUT": {
@@ -13,5 +14,10 @@
     "ALERTS": "Alerts",
     "FRENCH": "French",
     "ENGLISH": "English"
-  }
+  },
+  "UNDER.CONSTRUCTION": "Under Construction",
+  "COMING.SOON": "Coming Soon",
+  "LOAD.MORE": "Load more",
+  "FULLSCREEN": "Fullscreen",
+  "EXIT_FULLSCREEN": "Exit fullscreen"
 }

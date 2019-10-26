@@ -19,13 +19,24 @@ import {
   MatListModule,
   MatMenuModule,
   MatSelectModule,
-  MatProgressBarModule
+  MatProgressBarModule, MatTooltipModule
 } from '@angular/material';
+import {ngxLoadingAnimationTypes, NgxLoadingModule} from 'ngx-loading';
+import {environment} from '../../environments/environment';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(httpClient);
+  return new TranslateHttpLoader(httpClient, '/assets/i18n/', '.json?cacheBuster=' + environment.cacheBusterHash);
 }
+
+const ngxLoadingModuleConfig = {
+  // animationType: ngxLoadingAnimationTypes.rotatingPlane,
+  backdropBackgroundColour: '#ffffff',
+  // backdropBorderRadius: '4px',
+  primaryColour: 'rgb(233, 30, 99)',
+  secondaryColour: 'rgb(63, 81, 181)',
+  tertiaryColour: 'rgb(233, 30, 99)'
+};
 
 @NgModule({
   declarations: [LayoutComponent],
@@ -42,9 +53,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatMenuModule,
     MatSelectModule,
     MatProgressBarModule,
+    MatTooltipModule,
 
     FlexLayoutModule,
-
+    NgxLoadingModule.forRoot(ngxLoadingModuleConfig),
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

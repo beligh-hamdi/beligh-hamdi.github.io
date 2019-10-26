@@ -55,6 +55,17 @@
           <mat-icon>notifications</mat-icon>
           <span>{{ 'LAYOUT.ALERTS' | translate }}</span>
         </button>
+        <button mat-menu-item *ngIf="!fullScreen" (click)="toggleFullscreen()"
+                matTooltip="Full screen mode, the best way to view this site" aria-label="Toggle full screen" >
+          <mat-icon>fullscreen</mat-icon>
+          <span>{{ 'FULLSCREEN' | translate }}</span>
+        </button>
+        <button mat-menu-item *ngIf="fullScreen" (click)="toggleFullscreen()"
+                matTooltip="Close full screen mode" aria-label="Close full screen mode" >
+          <mat-icon>fullscreen_exit</mat-icon>
+          <span>{{ 'EXIT_FULLSCREEN' | translate }}</span>
+        </button>
+
       </mat-menu>
 
       <mat-menu #menuLanguages="matMenu">

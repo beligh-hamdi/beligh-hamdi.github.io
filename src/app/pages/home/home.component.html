@@ -1,7 +1,22 @@
-<h1>{{ 'MENU.HOME' | translate }}</h1>
+<app-header-page title="MENU.HOME"></app-header-page>
 
 <mat-card class="app-card">
   <mat-card-content>
     <p>{{ 'HOME.TITLE' | translate }}</p>
   </mat-card-content>
+</mat-card>
+
+<app-under-construction>></app-under-construction>
+
+<mat-card class="app-card loading" *ngIf="status.isLoadingNews">
+  <mat-card-content>
+    <ngx-loading [show]="status.isLoadingNews"></ngx-loading>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="app-card" *ngFor="let article of news">
+  <mat-card-header>
+    <mat-card-title>{{ article.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content [innerHTML]="article.content"></mat-card-content>
 </mat-card>

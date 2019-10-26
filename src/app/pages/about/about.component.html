@@ -1,7 +1,39 @@
-<h1>{{ 'MENU.ABOUT' | translate }}</h1>
+<app-header-page title="MENU.ABOUT"></app-header-page>
+
+<app-under-construction>></app-under-construction>
 
 <mat-card class="app-card">
-  <mat-card-content>
-    <p>{{ 'MENU.ABOUT' | translate }}</p>
+  <mat-card-header>
+    <mat-card-title>Skills</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="loading">
+    <pre *ngIf="(skills$ | async) as skills; else loadingSkills">{{ skills | json }}</pre>
+    <ng-template #loadingSkills>
+      <ngx-loading [show]="true" [config]="{ backdropBackgroundColour: '#DDD'}"></ngx-loading>
+    </ng-template>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="app-card">
+  <mat-card-header>
+    <mat-card-title>Skills</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="loading">
+    <ngx-loading [show]="loading" [config]="{ backdropBackgroundColour: '#CCC'}"></ngx-loading>
+    <mat-list>
+      <mat-list-item *ngFor="let skill of skills">{{skill}}</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="app-card">
+  <mat-card-header>
+    <mat-card-title>Skills</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="loading">
+    <ngx-loading [show]="status.isLoading" [config]="{ backdropBackgroundColour: '#CCC'}"></ngx-loading>
+    <mat-list>
+      <mat-list-item *ngFor="let skill of skills1">{{skill}}</mat-list-item>
+    </mat-list>
   </mat-card-content>
 </mat-card>

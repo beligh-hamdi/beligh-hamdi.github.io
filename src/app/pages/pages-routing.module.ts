@@ -6,9 +6,11 @@ import {ContactComponent} from './contact/contact.component';
 import {CvComponent} from './cv/cv.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {SkillListResolver} from '../core/services/skill-list.resolver';
+import {BlogComponent} from './blog/blog.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'blog', component: BlogComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'cv',
