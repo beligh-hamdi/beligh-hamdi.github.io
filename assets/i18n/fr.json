@@ -1,0 +1,23 @@
+{
+  "HOME": {
+    "TITLE": "Binevenue"
+  },
+  "MENU": {
+    "HOME": "Accueil",
+    "ABOUT": "A Propos",
+    "CONTACT": "Contact",
+    "BLOG": "Blog",
+    "CV": "CV"
+  },
+  "LAYOUT": {
+    "LANGUAGES": "Langues",
+    "ALERTS": "Alertes",
+    "FRENCH": "Français",
+    "ENGLISH": "Anglais"
+  },
+  "UNDER.CONSTRUCTION": "En Construction",
+  "COMING.SOON": "Bientôt disponible",
+  "LOAD.MORE": "Charger plus",
+  "FULLSCREEN": "Plein écran",
+  "EXIT_FULLSCREEN": "Quitter le mode plein écran"
+}
