@@ -34,8 +34,9 @@ export class CoreService {
   }
 
   getNews(): Observable<any> {
-    return this.http.get(`assets/data/news.json?cacheBuster=${environment.cacheBusterHash}`)
-      .pipe(delay(4000));
+    const apiEndpoint = 'https://newsapi.org/v2/top-headlines?country=fr&apiKey=859a8612753c41a9a94196ade4876853';
+    const apiEndpointStatic = `assets/data/news.json?cacheBuster=${environment.cacheBusterHash}`;
+    return this.http.get(apiEndpoint).pipe(delay(4000));
   }
 
   private generateSkills(): Array<string> {

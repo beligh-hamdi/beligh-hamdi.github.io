@@ -6,7 +6,8 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./header-page.component.scss']
 })
 export class HeaderPageComponent implements OnInit {
-  @Input() title;
+  @Input() title: any;
+  @Input() icon: any = 'folder';
   constructor() { }
 
   ngOnInit() {

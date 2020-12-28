@@ -7,7 +7,7 @@ import {Event, NavigationCancel, NavigationEnd, NavigationError, NavigationStart
 import { Location } from '@angular/common';
 import {TranslateService} from '@ngx-translate/core';
 import {CoreService} from '../services/core.service';
-import {MatIconRegistry} from '@angular/material';
+import {MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
 
 
@@ -17,20 +17,17 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  loading = false;
+  loading: boolean = false;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
     );
-
   currentRoute: any;
-
-  links = [];
-  title: string;
-  logo: string;
-
-  fullScreen = false;
-  elem;
+  links: any = [];
+  title: string = '';
+  logo: string = '';
+  fullScreen: boolean = false;
+  elem: any;
 
   constructor(private breakpointObserver: BreakpointObserver,
               private location: Location,
@@ -52,6 +49,7 @@ export class LayoutComponent implements OnInit {
       sanitizer.bypassSecurityTrustResourceUrl('assets/img/flags/france-flag.svg'));
 
     this.elem = document.documentElement;
+    document.onfullscreenchange = () => this.detectFullscreen();
   }
 
   ngOnInit(): void {
@@ -94,14 +92,32 @@ export class LayoutComponent implements OnInit {
     }
   }
 
+  detectFullscreen(): void {
+    if (this.document.exitFullscreen || 
+      this.document.mozCancelFullScreen ||
+      this.document.webkitExitFullscreen ||
+      this.document.msExitFullscreen
+      ) {
+      this.fullScreen = true;
+    }
+
+    if (this.elem.requestFullscreen || 
+      this.elem.mozRequestFullScreen ||
+      this.elem.webkitRequestFullscreen ||
+      this.elem.msRequestFullscreen
+      ) {
+      this.fullScreen = false;
+    }
+  }
+
   private routerEvent() {
     this.router.events.subscribe((event: Event) => {
       if (this.location.path() !== '') {
-        this.currentRoute =  this.links.find(item => {
+        this.currentRoute =  this.links.find((item: any) => {
           return item.path === this.location.path();
         });
       } else {
-        this.currentRoute = this.links.find(item => {
+        this.currentRoute = this.links.find((item: any) => {
           return item.title === 'Home';
         });
       }
@@ -128,7 +144,6 @@ export class LayoutComponent implements OnInit {
   private initTranslate() {
     this.translate.addLangs(['en', 'fr']);
     this.translate.setDefaultLang('en');
-
     const browserLang = this.translate.getBrowserLang();
     this.translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
   }

@@ -1,37 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .app-card {
-  margin: 4px;
-  padding: 4px;
-}
+    margin: 4px;
+    padding: 4px;
+  }
+  
+  .main-panel, .main-panel-static {
+    max-height: 90vh;
+    overflow-y: scroll;
+  }
+  
+  .app-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .loading {
+    position: relative;
+    min-height: 30px;
+  }
+  
+  .app-img-under-construction {
+    height: 100px;
+  }
 
-.main-panel, .main-panel-static {
-  max-height: 90vh;
-  overflow-y: scroll;
-}
-
-.app-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.loading {
-  position: relative;
-  min-height: 30px;
-}
-
-.app-img-under-construction {
-  height: 100px;
-}
+  

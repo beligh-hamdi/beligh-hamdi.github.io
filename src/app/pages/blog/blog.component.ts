@@ -9,16 +9,16 @@ import {map, mergeAll} from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BlogComponent implements OnInit {
-  status = { isLoadingPosts: false, isLoadingStaticPosts: false };
+  status: any = { isLoadingPosts: false, isLoadingStaticPosts: false };
 
-  posts = [];
-  page = 1;
-  limit = 5;
-  totalCount: number;
+  posts: any = [];
+  page: number = 1;
+  limit: number = 5;
+  totalCount: number = 0;
 
-  staticPosts = [];
-  staticPostPage = 1;
-  maxStaticPages: number;
+  staticPosts: any = [];
+  staticPostPage: number = 1;
+  maxStaticPages: number = 0;
 
   constructor(private coreService: CoreService,
               private changeDetectorRef: ChangeDetectorRef) { }
@@ -52,7 +52,7 @@ export class BlogComponent implements OnInit {
     this.coreService.getPosts(page, limit).pipe(
       map(resp => {
         const keys = resp.headers.keys();
-        const headers = keys.map(key => `${key} ${resp.headers.get(key)}`);
+        // const headers = keys.map(key => `${key} ${resp.headers.get(key)}`);
         this.totalCount = +`${resp.headers.get('x-total-count')}`;
         return resp.body;
       }),

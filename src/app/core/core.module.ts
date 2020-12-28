@@ -11,17 +11,17 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
 
-import {
-  MatToolbarModule,
-  MatButtonModule,
-  MatSidenavModule,
-  MatIconModule,
-  MatListModule,
-  MatMenuModule,
-  MatSelectModule,
-  MatProgressBarModule, MatTooltipModule
-} from '@angular/material';
-import {ngxLoadingAnimationTypes, NgxLoadingModule} from 'ngx-loading';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatSelectModule} from '@angular/material/select';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
+import {NgxLoadingModule} from 'ngx-loading';
 import {environment} from '../../environments/environment';
 
 // AoT requires an exported function for factories

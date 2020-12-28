@@ -4,8 +4,7 @@ import {
   OnInit
 } from '@angular/core';
 import {CoreService} from '../../core/services/core.service';
-import {defaultIfEmpty, map, mergeAll} from 'rxjs/operators';
-import {Observable} from 'rxjs';
+import {mergeAll} from 'rxjs/operators';
 
 @Component({
   selector: 'app-about',
@@ -14,23 +13,20 @@ import {Observable} from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AboutComponent implements OnInit {
-  isLoading$: Observable<boolean>;
+  isLoading$: any;
 
-  loading: boolean;
-  skills: string[];
+  loading: boolean = false;
+  skills: string[] = [];
 
   status = { isLoading: false, isLoadingPosts: false };
   skills1: string[] = [];
-  skills$: Observable<any>;
+  skills$: any;
 
   constructor(private coreService: CoreService,
               private changeDetectorRef: ChangeDetectorRef) { }
 
   ngOnInit() {
-    this.skills$ = this.coreService.getSkills().pipe(
-      defaultIfEmpty([])
-    );
-
+    this.skills$ = this.coreService.getSkills();
     this.getSkills();
     this.getSkills1();
   }

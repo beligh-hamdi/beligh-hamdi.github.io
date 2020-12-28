@@ -6,12 +6,6 @@
   width: 220px;
 }
 
-/*
-.sidenav .mat-toolbar {
- background: inherit;
-}
-*/
-
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
@@ -37,6 +31,7 @@
   position: relative;
   margin-top: -21px;
   top: 12px;
+  margin-left: 5px;
   height: 40px;
   border-radius: 50%;
 }

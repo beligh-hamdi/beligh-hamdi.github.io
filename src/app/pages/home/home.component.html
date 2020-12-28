@@ -1,12 +1,5 @@
-<app-header-page title="MENU.HOME"></app-header-page>
+<app-header-page title="MENU.HOME" icon="home"></app-header-page>
 
-<mat-card class="app-card">
-  <mat-card-content>
-    <p>{{ 'HOME.TITLE' | translate }}</p>
-  </mat-card-content>
-</mat-card>
-
-<app-under-construction>></app-under-construction>
 
 <mat-card class="app-card loading" *ngIf="status.isLoadingNews">
   <mat-card-content>

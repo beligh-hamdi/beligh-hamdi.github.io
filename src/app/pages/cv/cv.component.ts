@@ -7,10 +7,9 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./cv.component.scss']
 })
 export class CvComponent implements OnInit {
-  skills: string[];
-  loading = true;
-
-  panelOpenState = false;
+  skills: string[] = [];
+  loading: boolean = true;
+  panelOpenState: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
