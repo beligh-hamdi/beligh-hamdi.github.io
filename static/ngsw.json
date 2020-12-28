@@ -1,0 +1,153 @@
+{
+  "configVersion": 1,
+  "timestamp": 1609128952286,
+  "index": "https://beligh-hamdi.github.io/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://beligh-hamdi.github.io/0-es2015.d480354a9d5451cf59df.js",
+        "https://beligh-hamdi.github.io/0-es5.d480354a9d5451cf59df.js",
+        "https://beligh-hamdi.github.io/10-es2015.957f82c7ef484443a6f4.js",
+        "https://beligh-hamdi.github.io/10-es5.957f82c7ef484443a6f4.js",
+        "https://beligh-hamdi.github.io/11-es2015.659a697f0e783f9c3a1e.js",
+        "https://beligh-hamdi.github.io/11-es5.659a697f0e783f9c3a1e.js",
+        "https://beligh-hamdi.github.io/12-es2015.9ccb3d666c1ad0dd5b0b.js",
+        "https://beligh-hamdi.github.io/12-es5.9ccb3d666c1ad0dd5b0b.js",
+        "https://beligh-hamdi.github.io/7-es2015.876ab7e8c5f6642920a6.js",
+        "https://beligh-hamdi.github.io/7-es5.876ab7e8c5f6642920a6.js",
+        "https://beligh-hamdi.github.io/8-es2015.9e312ee998bcd3795417.js",
+        "https://beligh-hamdi.github.io/8-es5.9e312ee998bcd3795417.js",
+        "https://beligh-hamdi.github.io/9-es2015.c870ffb2ff278161c3b1.js",
+        "https://beligh-hamdi.github.io/9-es5.c870ffb2ff278161c3b1.js",
+        "https://beligh-hamdi.github.io/common-es2015.6160f7c1bc424da1de33.js",
+        "https://beligh-hamdi.github.io/common-es5.6160f7c1bc424da1de33.js",
+        "https://beligh-hamdi.github.io/favicon.ico",
+        "https://beligh-hamdi.github.io/index.html",
+        "https://beligh-hamdi.github.io/main-es2015.b1efdb7a445ac4b784d9.js",
+        "https://beligh-hamdi.github.io/main-es5.b1efdb7a445ac4b784d9.js",
+        "https://beligh-hamdi.github.io/manifest.webmanifest",
+        "https://beligh-hamdi.github.io/polyfills-es2015.81a57085da310ed45aac.js",
+        "https://beligh-hamdi.github.io/polyfills-es5.d3659388e360710a7cda.js",
+        "https://beligh-hamdi.github.io/runtime-es2015.54b640dae29cc0ad24bd.js",
+        "https://beligh-hamdi.github.io/runtime-es5.54b640dae29cc0ad24bd.js",
+        "https://beligh-hamdi.github.io/styles.79c9a3781e257a43d6fa.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://beligh-hamdi.github.io/assets/data/config copy.json",
+        "https://beligh-hamdi.github.io/assets/data/config.json",
+        "https://beligh-hamdi.github.io/assets/data/news.json",
+        "https://beligh-hamdi.github.io/assets/data/posts/posts1.json",
+        "https://beligh-hamdi.github.io/assets/data/posts/posts2.json",
+        "https://beligh-hamdi.github.io/assets/i18n/en.json",
+        "https://beligh-hamdi.github.io/assets/i18n/fr.json",
+        "https://beligh-hamdi.github.io/assets/icons/icon-128x128.png",
+        "https://beligh-hamdi.github.io/assets/icons/icon-144x144.png",
+        "https://beligh-hamdi.github.io/assets/icons/icon-152x152.png",
+        "https://beligh-hamdi.github.io/assets/icons/icon-192x192.png",
+        "https://beligh-hamdi.github.io/assets/icons/icon-384x384.png",
+        "https://beligh-hamdi.github.io/assets/icons/icon-512x512.png",
+        "https://beligh-hamdi.github.io/assets/icons/icon-72x72.png",
+        "https://beligh-hamdi.github.io/assets/icons/icon-96x96.png",
+        "https://beligh-hamdi.github.io/assets/img/beligh.jpeg",
+        "https://beligh-hamdi.github.io/assets/img/beligh100x100.png",
+        "https://beligh-hamdi.github.io/assets/img/beligh50x50.png",
+        "https://beligh-hamdi.github.io/assets/img/flags/france-flag-icon-32.png",
+        "https://beligh-hamdi.github.io/assets/img/flags/france-flag.svg",
+        "https://beligh-hamdi.github.io/assets/img/flags/united-kingdom-flag-icon-32.png",
+        "https://beligh-hamdi.github.io/assets/img/flags/united-kingdom-flag.svg",
+        "https://beligh-hamdi.github.io/assets/img/flags/united-states-of-america-flag-icon-32.png",
+        "https://beligh-hamdi.github.io/assets/img/flags/united-states-of-america-flag.svg",
+        "https://beligh-hamdi.github.io/assets/img/under_construction.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://beligh-hamdi.github.io/0-es2015.d480354a9d5451cf59df.js": "765496d3b121c489282b50b58d4bdd15586fc52d",
+    "https://beligh-hamdi.github.io/0-es5.d480354a9d5451cf59df.js": "aad6ba038ab5b9a06d7d916d9709787a2f0ae864",
+    "https://beligh-hamdi.github.io/10-es2015.957f82c7ef484443a6f4.js": "29b2dd70720ada74ea57deb5b2b3f8fe7408c47e",
+    "https://beligh-hamdi.github.io/10-es5.957f82c7ef484443a6f4.js": "d81cf3a4dfc90bc7dd511e943c71d00693e5a30b",
+    "https://beligh-hamdi.github.io/11-es2015.659a697f0e783f9c3a1e.js": "9d16d4e26c6c8edb9821f0bf16ee9b5d0e6eb18a",
+    "https://beligh-hamdi.github.io/11-es5.659a697f0e783f9c3a1e.js": "65e36784bc09cd51661367a1f775ebcdb626b066",
+    "https://beligh-hamdi.github.io/12-es2015.9ccb3d666c1ad0dd5b0b.js": "7ae6a3cce831e511e27dcc53c7ddb67b8ec05dd5",
+    "https://beligh-hamdi.github.io/12-es5.9ccb3d666c1ad0dd5b0b.js": "ab94bca894b5f126cb982194700cff6728247837",
+    "https://beligh-hamdi.github.io/7-es2015.876ab7e8c5f6642920a6.js": "04d83a10c60171fb32785adbd0255aff9e5eb2f9",
+    "https://beligh-hamdi.github.io/7-es5.876ab7e8c5f6642920a6.js": "7858bb0bad98acb549695bcc9b863bcb23f59078",
+    "https://beligh-hamdi.github.io/8-es2015.9e312ee998bcd3795417.js": "2eab60b9800b53660303c3a9064fbea4078c2b7b",
+    "https://beligh-hamdi.github.io/8-es5.9e312ee998bcd3795417.js": "b52be8c6f426cd24896eda4e67aa7ca592e98fe8",
+    "https://beligh-hamdi.github.io/9-es2015.c870ffb2ff278161c3b1.js": "f0008adddf2499d245f4be34810866dc286d9cf4",
+    "https://beligh-hamdi.github.io/9-es5.c870ffb2ff278161c3b1.js": "373fc315edec6cd8f25c9b2c0ec7c2e7a7e8ccbf",
+    "https://beligh-hamdi.github.io/assets/data/config copy.json": "547b206c4068f15d128fd5dcce110287a5adaf2c",
+    "https://beligh-hamdi.github.io/assets/data/config.json": "6869b1c119771cc870680ee3799ed9ce50b0badc",
+    "https://beligh-hamdi.github.io/assets/data/news.json": "f2605ab40911c296cccd3446d07273eafae2a60a",
+    "https://beligh-hamdi.github.io/assets/data/posts/posts1.json": "22e85f44f0b668eeb9fbc3aaa80d66dbe30ea163",
+    "https://beligh-hamdi.github.io/assets/data/posts/posts2.json": "fc63756bdf457914e783829481b88f00b91d4b2b",
+    "https://beligh-hamdi.github.io/assets/i18n/en.json": "4bf13b6ebf4efc4d5f6d39fd1b2adc478e050993",
+    "https://beligh-hamdi.github.io/assets/i18n/fr.json": "3345503ea5fab0f9d4823cac2d86856822b9a994",
+    "https://beligh-hamdi.github.io/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://beligh-hamdi.github.io/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://beligh-hamdi.github.io/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://beligh-hamdi.github.io/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://beligh-hamdi.github.io/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://beligh-hamdi.github.io/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://beligh-hamdi.github.io/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://beligh-hamdi.github.io/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://beligh-hamdi.github.io/assets/img/beligh.jpeg": "49fa2fa1983e6233b67f9ce68645cdc299939d40",
+    "https://beligh-hamdi.github.io/assets/img/beligh100x100.png": "fc49562fb7db4f73e7b6aa2b099008cb26a2d84a",
+    "https://beligh-hamdi.github.io/assets/img/beligh50x50.png": "5863406f35b6ec611250d5fe3b2957871d2e235a",
+    "https://beligh-hamdi.github.io/assets/img/flags/france-flag-icon-32.png": "b26af78e7435931a85c2f9ee77faa686f30cf80e",
+    "https://beligh-hamdi.github.io/assets/img/flags/france-flag.svg": "40b0d07959d3cd7d062f537aff867b0cc2dbef7c",
+    "https://beligh-hamdi.github.io/assets/img/flags/united-kingdom-flag-icon-32.png": "0f52f02f3ef51193a448b2607d67b6c94b5489f9",
+    "https://beligh-hamdi.github.io/assets/img/flags/united-kingdom-flag.svg": "2ea3ee72aa8e7d87b26b05bc0d829b6a710d2ecb",
+    "https://beligh-hamdi.github.io/assets/img/flags/united-states-of-america-flag-icon-32.png": "ef8c760fb3887504517d9d731ace8f751353a752",
+    "https://beligh-hamdi.github.io/assets/img/flags/united-states-of-america-flag.svg": "aa0b31a96a7449cd773febd86b06c1ce843478c1",
+    "https://beligh-hamdi.github.io/assets/img/under_construction.png": "8288bad39e95f6d9b46dfa6eef49e01cab2d8922",
+    "https://beligh-hamdi.github.io/common-es2015.6160f7c1bc424da1de33.js": "e98673303590030c321b8ef31c25fb11ca15d418",
+    "https://beligh-hamdi.github.io/common-es5.6160f7c1bc424da1de33.js": "e0774c3b926f7f40051dbc37375e651a5b34a9f6",
+    "https://beligh-hamdi.github.io/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://beligh-hamdi.github.io/index.html": "b11751f735471ec84cb14f14db3b86f24ce1b252",
+    "https://beligh-hamdi.github.io/main-es2015.b1efdb7a445ac4b784d9.js": "c17586087a6b8635c8c705bf30e57561c3ac6028",
+    "https://beligh-hamdi.github.io/main-es5.b1efdb7a445ac4b784d9.js": "884f359d1d3ad3c66e9b50565885f5813126ddc2",
+    "https://beligh-hamdi.github.io/manifest.webmanifest": "31ad06b657295b5270f34cbc2d1e5bcd1d723c55",
+    "https://beligh-hamdi.github.io/polyfills-es2015.81a57085da310ed45aac.js": "946f2327b3e3d48fcf1d2b0f19a94385a39a157f",
+    "https://beligh-hamdi.github.io/polyfills-es5.d3659388e360710a7cda.js": "add73677378500fcfd517e75ae9ba478cb54a20e",
+    "https://beligh-hamdi.github.io/runtime-es2015.54b640dae29cc0ad24bd.js": "b8480a97fd1f053af30a62ae56618bfb6f4a1fee",
+    "https://beligh-hamdi.github.io/runtime-es5.54b640dae29cc0ad24bd.js": "6e045c1fac3a774237f5bbc9b1fd32714776cdf1",
+    "https://beligh-hamdi.github.io/styles.79c9a3781e257a43d6fa.css": "bf11b3ecc31f734851d26d958d6242079c6baa24"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
