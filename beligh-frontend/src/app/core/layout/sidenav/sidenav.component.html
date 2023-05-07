@@ -1,0 +1,30 @@
+<mat-toolbar>Menu</mat-toolbar>
+
+<mat-nav-list>
+
+    <a mat-list-item [routerLink]="['/']" routerLinkActive="active">
+        <mat-icon matListItemIcon class="app-list-item-icon">home</mat-icon>
+        <div matListItemTitle>Home</div>
+    </a>
+
+    <a mat-list-item routerLinkActive="active" [routerLink]="['/blog']">
+        <mat-icon matListItemIcon class="app-list-item-icon">rss_feed</mat-icon>
+        <div matListItemTitle>Blog</div>
+    </a>
+
+    <a mat-list-item routerLinkActive="active" [routerLink]="['/explore']">
+        <mat-icon matListItemIcon class="app-list-item-icon">explore</mat-icon>
+        <div matListItemTitle>Explore</div>
+    </a>
+
+    <a mat-list-item routerLinkActive="active" [routerLink]="['/admin']">
+        <mat-icon matListItemIcon class="app-list-item-icon">shield_person</mat-icon>
+        <div matListItemTitle>Admin</div>
+    </a>
+
+    <a mat-list-item routerLinkActive="active" [routerLink]="['/about']" class="app-push-bottom">
+        <mat-icon matListItemIcon class="app-list-item-icon">info</mat-icon>
+        <div matListItemTitle>About</div>
+    </a>
+
+</mat-nav-list>

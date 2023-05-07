@@ -1,0 +1,34 @@
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
+
+
+            <section *ngIf="articleDetails$ | async as articleDetails">
+                <div *ngIf="articleContent$ | async as articleContent">
+                    <mat-card>
+                        <mat-card-header>
+                            <mat-card-title>{{ articleDetails.title }}</mat-card-title>
+                            <mat-card-subtitle>{{ articleDetails.author }}, {{ articleDetails.publishedAt | date }}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image [src]="articleDetails.urlToImage" alt="Photo" appDefaultMissingImage>
+                        <mat-card-content [innerHtml]="articleContent">
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </section>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+

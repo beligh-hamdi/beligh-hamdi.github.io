@@ -1,0 +1,8 @@
+<section class="app-scroll">
+    <p *ngIf="(editorSubject | async) === null">Loading the editor...</p>
+    <editor name="summary" [init]="options" (onInit)="onEditorInit($event)"></editor>
+     
+    <button mat-button (click)="getText()">Get Text</button>
+</section>
+
+

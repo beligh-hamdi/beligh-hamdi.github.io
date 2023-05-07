@@ -1,0 +1,17 @@
+.app-push-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+a.mat-list-item.active {
+    background: rgba(0, 0, 0, .04);
+}
+
+.mat-list-item,
+.mat-menu-item {
+    font-size: 14px !important;
+}
+
+.app-list-item-icon {
+    color: rgba(0, 0, 0, .87) !important;
+}

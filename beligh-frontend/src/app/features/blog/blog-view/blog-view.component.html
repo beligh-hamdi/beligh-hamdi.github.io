@@ -1,0 +1,30 @@
+<app-header-view icon="rss_feed" title="Blog"></app-header-view>
+
+
+<div class="container">
+ 
+  <div *ngIf="articles$ | async as articles" class="row">
+
+    <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3"
+      *ngFor="let article of articles; trackBy: trackByFn">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ article.title | slice:0:100 }}</mat-card-title>
+          <mat-card-subtitle>{{ article.author }}, {{ article.publishedAt | date }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="article.urlToImage" alt="Photo" appDefaultMissingImage>
+        <mat-card-content>
+          <br> <br>
+          <div [innerHtml]="article.description"></div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="openMore(article.id)">
+            <mat-icon>read_more</mat-icon>
+            <span>Read more...</span>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+    <section *ngIf="items" class="row main-panel" infinite-scroll [infiniteScrollDistance]="distance"
+        [infiniteScrollThrottle]="throttle" [infiniteScrollContainer]="selector" [fromRoot]="true"
+        (scrolled)="onScroll()">
+
+        <article class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3"
+            *ngFor="let item of items ; trackBy: trackByFn">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ item.title | slice:0:100 }}</mat-card-title>
+                    <mat-card-subtitle>{{ item.author }}, {{ item.publishedAt | date }}</mat-card-subtitle>
+                  </mat-card-header>
+                <img mat-card-image class="app-card-image" alt="Photo"
+                            [ngSrc]="item.urlToImage || defaultImage" 
+                            lazy fill
+                            sizes="100vw">
+                <mat-card-content>
+
+                    <div class="row">
+                       
+                        <div class="col-12">
+                            <div class="app-card-url">
+                                <a [href]="item.url" target="_blank" rel="noopener noreferrer">{{ item.url | slice: 0:24}}...</a>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <article>{{ item.content}}</article>
+                        </div> 
+                    </div>
+                    
+                </mat-card-content>
+            </mat-card>
+        </article>
+
+    </section>
+</div>

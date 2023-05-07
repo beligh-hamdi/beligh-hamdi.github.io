@@ -1,0 +1,50 @@
+<mat-sidenav-container class="sidenav-container" *ngIf="appConfig$ | async as appConfig">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'">
+
+    <app-sidenav></app-sidenav>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span [routerLink]="['/']">
+        {{ appConfig.appName}}
+      </span>
+      <span class="app-navbar-spacer"></span>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item  [routerLink]="['/admin']">
+          <mat-icon>settings</mat-icon>
+          <span>Config</span>
+        </button>
+      </mat-menu>
+
+    </mat-toolbar>
+
+    <mat-progress-bar mode="indeterminate"  *ngIf="(spinnerActive) || (loading$ | async)"></mat-progress-bar>
+
+    <div class="app-container">
+      <router-outlet></router-outlet>
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4920006736649774" crossorigin="anonymous"></script>
+        <!-- responsive -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4920006736649774"
+            data-ad-slot="6217856507"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
