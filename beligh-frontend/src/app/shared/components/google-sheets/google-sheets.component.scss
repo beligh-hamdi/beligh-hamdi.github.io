@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+.example-container {
+  height: 600px;
+  overflow: auto;
+}
+
+tr.mat-mdc-footer-row {
+  font-weight: bold !important;
+}
+
+.mat-mdc-table-sticky {
+  border-top: 1px solid #e0e0e0;
+}

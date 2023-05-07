@@ -8,7 +8,12 @@ import { CoreModule } from '@core/core.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { GoogleLoginProvider, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
-import { clientId, googleLoginOptions } from 'projects/google-spreadsheets-lib/src/public-api';
+import { clientId, googleLoginOptions } from './shared/components/google-sheets/google-sheets.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor } from './shared/services/jwt.intercepter';
+import { ErrorInterceptor } from './shared/services/error.intercepter';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +23,7 @@ import { clientId, googleLoginOptions } from 'projects/google-spreadsheets-lib/s
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatSnackBarModule,
     CoreModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
@@ -27,6 +33,8 @@ import { clientId, googleLoginOptions } from 'projects/google-spreadsheets-lib/s
     }),
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {

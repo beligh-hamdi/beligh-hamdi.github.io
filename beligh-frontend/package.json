@@ -26,14 +26,12 @@
     "@angular/youtube-player": "^16.0.0",
     "@tinymce/tinymce-angular": "^7.0.0",
     "ngx-infinite-scroll": "^15.0.0",
-    "rxjs": "~7.8.0",
-    "tinymce": "^6.4.2",
-    "tslib": "^2.3.0",
     "video.js": "^8.3.0",
-    "videojs-youtube": "^3.0.1",
     "@abacritt/angularx-social-login": "^2.0.0",
-    "xlsx": "^0.18.5",
+    "tinymce": "^6.4.2",
     "chart.js": "^4.2.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {

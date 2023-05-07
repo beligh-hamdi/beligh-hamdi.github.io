@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1683432326449,
+  "timestamp": 1683502596709,
   "index": "https://beligh-hamdi.github.io/index.html",
   "assetGroups": [
     {
@@ -11,18 +11,18 @@
         "ignoreVary": true
       },
       "urls": [
+        "https://beligh-hamdi.github.io/151.2de45458e9c4507e.js",
         "https://beligh-hamdi.github.io/414.63798eead9052b2d.js",
-        "https://beligh-hamdi.github.io/416.b845bbf5f991c028.js",
-        "https://beligh-hamdi.github.io/503.bb4669c018b940ec.js",
         "https://beligh-hamdi.github.io/63.a343ffe8cd54ab8f.js",
+        "https://beligh-hamdi.github.io/715.a531bda80893096a.js",
         "https://beligh-hamdi.github.io/740.fb406c3978541666.js",
-        "https://beligh-hamdi.github.io/common.98951288fc1450ac.js",
+        "https://beligh-hamdi.github.io/872.dcb799f23794e084.js",
         "https://beligh-hamdi.github.io/favicon.ico",
         "https://beligh-hamdi.github.io/index.html",
-        "https://beligh-hamdi.github.io/main.d604eaf7c2c1dca1.js",
+        "https://beligh-hamdi.github.io/main.3f31748d95aaaaf0.js",
         "https://beligh-hamdi.github.io/manifest.webmanifest",
         "https://beligh-hamdi.github.io/polyfills.737cd2a30d8c5779.js",
-        "https://beligh-hamdi.github.io/runtime.43fb43ae5d824e17.js",
+        "https://beligh-hamdi.github.io/runtime.aa55e628d1bd1f0a.js",
         "https://beligh-hamdi.github.io/scripts.98d679844bf4b788.js",
         "https://beligh-hamdi.github.io/styles.fbe3c716ba468b76.css"
       ],
@@ -109,11 +109,12 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "https://beligh-hamdi.github.io/151.2de45458e9c4507e.js": "67e160ae0b8ec3e04ae5aa8897df7dc017d3590c",
     "https://beligh-hamdi.github.io/414.63798eead9052b2d.js": "060b227a5d9de98bf34c09f88f8b49a5b3063fd6",
-    "https://beligh-hamdi.github.io/416.b845bbf5f991c028.js": "d23fb93980c913c47a6a43c0f2ea0de08a659640",
-    "https://beligh-hamdi.github.io/503.bb4669c018b940ec.js": "0a0db2c3f47c1eca11238e1fbdfcbff475533f4d",
     "https://beligh-hamdi.github.io/63.a343ffe8cd54ab8f.js": "d7996ba8f96c4dcfbb3ff503da05b6a1455ddab1",
+    "https://beligh-hamdi.github.io/715.a531bda80893096a.js": "b13c863b655ed74cbc9115eadfe963c36b3caafb",
     "https://beligh-hamdi.github.io/740.fb406c3978541666.js": "6c13b7348c85890dc32675415b7de20ef6b38386",
+    "https://beligh-hamdi.github.io/872.dcb799f23794e084.js": "7bbeb74910b787a4242107d8a2bf155f88386445",
     "https://beligh-hamdi.github.io/assets/data/blog/2023/04/1.html": "52a005034dda294e6123bf8fcda226106f2f1147",
     "https://beligh-hamdi.github.io/assets/data/blog/2023/04/2.html": "bd16e6080683f9846dda97fd13f1f38e42f39f73",
     "https://beligh-hamdi.github.io/assets/data/blog/2023/04/3.html": "17a3fa90d13947a5c8d0ebf47c8763aaaa74b33e",
@@ -181,13 +182,12 @@
     "https://beligh-hamdi.github.io/assets/img/placeholder.png": "048edd31d22dd9b65651adc046853c1ee0658bc6",
     "https://beligh-hamdi.github.io/assets/ios-add-btn.png": "b04f8aff472620d61612217ef4b2cd94f07b914b",
     "https://beligh-hamdi.github.io/assets/ios-menu-btn.png": "85935a3142fbdca3ebd69db254792588e3c48b13",
-    "https://beligh-hamdi.github.io/common.98951288fc1450ac.js": "1ebc9d924325d67c22c0a9c5a7c504e5210fae20",
     "https://beligh-hamdi.github.io/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://beligh-hamdi.github.io/index.html": "c6fda4a513d8036003b40afe6d7ce1da691be852",
-    "https://beligh-hamdi.github.io/main.d604eaf7c2c1dca1.js": "11a737d44bcb4a62fbd09018facf1525874a6d95",
+    "https://beligh-hamdi.github.io/index.html": "90a99e69136592454004d50898d96c09f6d57c15",
+    "https://beligh-hamdi.github.io/main.3f31748d95aaaaf0.js": "a125af2d8615e488697084445980f26ad6046372",
     "https://beligh-hamdi.github.io/manifest.webmanifest": "86345ebc5a36a8bfa1b3515d29c999852fa17962",
     "https://beligh-hamdi.github.io/polyfills.737cd2a30d8c5779.js": "5462a26c0adf8c356107da9a497e32410d4270ed",
-    "https://beligh-hamdi.github.io/runtime.43fb43ae5d824e17.js": "e4264cc9357ede839e5ba0ccea9c207904a67f6a",
+    "https://beligh-hamdi.github.io/runtime.aa55e628d1bd1f0a.js": "1669bed0bde532b68fb8358cc3903d2512901b09",
     "https://beligh-hamdi.github.io/scripts.98d679844bf4b788.js": "331bbc9179ff1e5c7d5084860a00fca55f67e6f8",
     "https://beligh-hamdi.github.io/styles.fbe3c716ba468b76.css": "3410a62ef361f33355ab7d47c8d3d0ba8be8e188"
   },

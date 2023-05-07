@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { VjsPlayerLibComponent } from '../../../../../projects/vjs-player-lib/src/lib/vjs-player-lib.component';
 import { MatCardModule } from '@angular/material/card';
+import { VjsPlayerComponent } from '@app/shared/components/vjs-player/vjs-player.component';
 
 @Component({
     selector: 'app-canada-view',
     templateUrl: './canada-view.component.html',
     styleUrls: ['./canada-view.component.scss'],
     standalone: true,
-    imports: [MatCardModule, VjsPlayerLibComponent],
+    imports: [MatCardModule, VjsPlayerComponent],
 })
 export class CanadaViewComponent {
 

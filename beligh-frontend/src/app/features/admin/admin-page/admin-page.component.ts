@@ -4,7 +4,6 @@ import { RouterLinkActive, RouterLink } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { HeaderViewComponent } from '../../../shared/components/header-view/header-view.component';
-import { GoogleSpreadsheetsLibModule } from 'projects/google-spreadsheets-lib/src/public-api';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { GoogleSpreadsheetsLibModule } from 'projects/google-spreadsheets-lib/sr
     templateUrl: './admin-page.component.html',
     styleUrls: ['./admin-page.component.scss'],
     standalone: true,
-    imports: [HeaderViewComponent, MatCardModule, MatListModule, RouterLinkActive, RouterLink, MatIconModule,  GoogleSpreadsheetsLibModule]
+    imports: [HeaderViewComponent, MatCardModule, MatListModule, RouterLinkActive, RouterLink, MatIconModule]
 })
 export class AdminPageComponent {
 

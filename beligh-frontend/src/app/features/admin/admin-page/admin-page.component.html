@@ -1,20 +1,10 @@
 <app-header-view icon="shield_person" title="Admin Dashboard"></app-header-view>
 
 
-
 <div class="container">
 
-    
-  
+
     <section class="row">
-
-
-        <article class="col-12 col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-8 col-xxl-8">
-            <app-google-spreadsheets-lib></app-google-spreadsheets-lib>
-            <br><br>
-        </article>
-
-
 
         <article class="col-12 col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-8 col-xxl-8">
 
@@ -22,18 +12,19 @@
                 <mat-card-content>
 
                     <mat-nav-list>
-            
                         <a mat-list-item routerLinkActive="active" [routerLink]="['/admin/editor']">
                             <mat-icon matListItemIcon class="app-list-item-icon">edit</mat-icon>
                             <div matListItemTitle>Editor</div>
                         </a>
-                    
+                        <a mat-list-item routerLinkActive="active" [routerLink]="['/admin/expense']">
+                            <mat-icon matListItemIcon class="app-list-item-icon">edit</mat-icon>
+                            <div matListItemTitle>Expense</div>
+                        </a>
                     </mat-nav-list>
-
 
                 </mat-card-content>
             </mat-card>
-         
+
         </article>
     </section>
 
