@@ -1,1 +1,17 @@
 @import 'video.js/dist/video-js.min.css';
+
+video::cue {
+ //   background-image: linear-gradient(to bottom, dimgray, lightgray);
+ //   background-color: transparent;
+  //  color: papayawhip;
+}
+
+video::cue(b) {
+   // color: peachpuff;
+}
+
+video {
+    background: url(https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Canada.svg/2560px-Flag_of_Canada.svg.png);
+    background-size: cover;
+}
+

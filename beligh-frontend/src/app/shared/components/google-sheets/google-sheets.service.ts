@@ -44,6 +44,22 @@ export class GoogleSheetsService {
       .get(`${environment.googleSheets.apiUrl}/${this.spreadsheetId}/values/${this.sheetId}!A1:Z`, options);
   }
 
+
+  getGoogleSheetsShared() {
+    // https://spreadsheets.google.com/feeds/worksheets/10GCH2DKZbK_vG3-Lozava3Kmg8_wYqgjfY2JeiVFOVM/public/full?alt=json
+    
+  //  https://spreadsheets.google.com/feeds/worksheets/spreadsheetId/public/full
+
+  // https://spreadsheets.google.com/feeds/worksheets/10GCH2DKZbK_vG3-Lozava3Kmg8_wYqgjfY2JeiVFOVM/public/full
+
+  // https://sheets.googleapis.com/v4/spreadsheets/10GCH2DKZbK_vG3-Lozava3Kmg8_wYqgjfY2JeiVFOVM?fields=sheets.properties.title
+    
+  // https://sheets.googleapis.com/v4/spreadsheets/10GCH2DKZbK_vG3-Lozava3Kmg8_wYqgjfY2JeiVFOVM/values/Characters
+    
+    
+    return this.httpClient.get('https://docs.google.com/spreadsheets/d/10GCH2DKZbK_vG3-Lozava3Kmg8_wYqgjfY2JeiVFOVM/edit#gid=1426772277');
+  }
+
   setToken(token: string) {
     localStorage.setItem('token',token);
   }
