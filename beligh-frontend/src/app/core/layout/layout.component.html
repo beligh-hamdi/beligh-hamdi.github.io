@@ -17,6 +17,13 @@
         <span> {{ appConfig.appName}}</span>
       </span>
       <span class="app-navbar-spacer"></span>
+      <mat-icon [ngClass]="lineStatus() === onlineStatusType.OFFLINE ? 'icon-offline' : 'icon-online'" [fontIcon]="lineStatus() ===  onlineStatusType.OFFLINE ? 'wifi_off' : 'wifi'"></mat-icon>
+      
+      <button mat-icon-button (click)="reloadCurrentPage()" aria-label="icon-button with a menu">
+        <mat-icon>refresh</mat-icon>
+      </button>
+  
+      
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu">
         <mat-icon>more_vert</mat-icon>
       </button>
@@ -32,6 +39,7 @@
     <mat-progress-bar mode="indeterminate"  *ngIf="(spinnerActive) || (loading$ | async)"></mat-progress-bar>
 
     <div class="app-container">
+
       <router-outlet></router-outlet>
 
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4920006736649774" crossorigin="anonymous"></script>

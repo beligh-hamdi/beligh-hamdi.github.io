@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, signal } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { filter, flatMap, map, mergeMap, shareReplay } from 'rxjs/operators';
@@ -15,8 +15,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { NgIf, AsyncPipe } from '@angular/common';
+import { NgIf, AsyncPipe, NgClass } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
+import { OnlineStatusModule, OnlineStatusService, OnlineStatusType } from 'ngx-online-status';
 
 
 const THUMBUP_ICON =
@@ -35,11 +36,16 @@ const THUMBUP_ICON =
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
   standalone: true,
-  imports: [NgIf, MatSidenavModule, SidenavComponent, MatToolbarModule, MatButtonModule, MatIconModule, RouterLink, MatMenuModule, MatProgressBarModule, RouterOutlet, AsyncPipe]
+  imports: [NgIf, MatSidenavModule, SidenavComponent, MatToolbarModule, MatButtonModule,
+    OnlineStatusModule, NgClass,
+    MatIconModule, RouterLink, MatMenuModule, MatProgressBarModule, RouterOutlet, AsyncPipe]
 })
 export class LayoutComponent implements OnInit {
   spinnerActive: boolean = true;
   loading$: Observable<boolean> = of(false);
+
+  onlineStatusType = OnlineStatusType;
+  lineStatus = signal(this.onlineStatusService.getStatus());
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -55,20 +61,26 @@ export class LayoutComponent implements OnInit {
     private router: Router,
     private cd: ChangeDetectorRef,
     iconRegistry: MatIconRegistry, 
-    sanitizer: DomSanitizer
-  ) { 
+    sanitizer: DomSanitizer,
+    private onlineStatusService: OnlineStatusService
+  ) {
+    
+    this.onlineStatusService.status.subscribe((status: OnlineStatusType) => {
+      this.lineStatus.set(status);
+    });
 
     iconRegistry.addSvgIconLiteral('thumbs-up', sanitizer.bypassSecurityTrustHtml(THUMBUP_ICON));
 
   }
 
- 
-
-
-
   ngOnInit(): void {
     this.loading();
     this.appConfig$ = this.appService.getConfig();
+  }
+
+  reloadCurrentPage() {
+    this.router.navigate([this.router.url]);
+    window.location.reload();
   }
 
 

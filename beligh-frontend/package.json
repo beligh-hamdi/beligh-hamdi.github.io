@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@abacritt/angularx-social-login": "^2.0.0",
     "@angular/animations": "^16.0.0",
     "@angular/cdk": "^16.0.0",
     "@angular/common": "^16.0.0",
@@ -25,13 +26,13 @@
     "@angular/service-worker": "^16.0.0",
     "@angular/youtube-player": "^16.0.0",
     "@tinymce/tinymce-angular": "^7.0.0",
-    "ngx-infinite-scroll": "^15.0.0",
-    "video.js": "^8.3.0",
-    "@abacritt/angularx-social-login": "^2.0.0",
-    "tinymce": "^6.4.2",
     "chart.js": "^4.2.1",
+    "ngx-infinite-scroll": "^15.0.0",
+    "ngx-online-status": "^2.0.0",
     "rxjs": "~7.8.0",
+    "tinymce": "^6.4.2",
     "tslib": "^2.3.0",
+    "video.js": "^8.3.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
