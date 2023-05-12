@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 
 //@ts-ignore
-import *  as videojs from 'video.js/dist/video.js';
-
+import videojs from 'video.js/dist/video.js';
 
 @Component({
   selector: 'app-vjs-player',
@@ -30,7 +29,7 @@ export class VjsPlayerComponent  implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.player = videojs(this.target.nativeElement, this.options, function onPlayerReady() {
-      console.log('onPlayerReady');
+     // console.log('onPlayerReady');
     });
   }
 

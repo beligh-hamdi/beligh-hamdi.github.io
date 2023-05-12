@@ -36,12 +36,6 @@ export class GoogleSheetsComponent implements OnInit {
     if (this.service.getToken()) {
       this.accessToken = this.service.getToken();
     }
-
-    this.service.getGoogleSheetsShared().subscribe({
-      next: (next: any) => {
-        console.log('next', next);
-      }
-    });
   }
 
   logout() {

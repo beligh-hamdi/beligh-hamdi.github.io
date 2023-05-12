@@ -19,7 +19,7 @@ export class CanadaViewComponent {
     autoplay: false,
     overrideNative: true,
     playsinline: true,
-    techOrder: ["html5", "youtube"],
+    techOrder: ["html5"],
     html5: {
       nativeVideoTracks: true,
       nativeAudioTracks: true,
@@ -32,14 +32,6 @@ export class CanadaViewComponent {
     }
   }
   
-  options = Object.assign({}, this.optionsBase, {
-    poster: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Canada.svg/2560px-Flag_of_Canada.svg.png',
-    sources: [
-      { src: 'https://www.youtube.com/watch?v=xjS6SftYQaQ', type: 'video/youtube' }
-    ]
-  });
-
-
   options1 = Object.assign({}, this.optionsBase, {
     poster: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Canada.svg/2560px-Flag_of_Canada.svg.png',
     sources: [
