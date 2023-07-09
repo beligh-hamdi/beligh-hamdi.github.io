@@ -17,8 +17,9 @@
         <span> {{ appConfig.appName}}</span>
       </span>
       <span class="app-navbar-spacer"></span>
-      <mat-icon [ngClass]="lineStatus() === onlineStatusType.OFFLINE ? 'icon-offline' : 'icon-online'" [fontIcon]="lineStatus() ===  onlineStatusType.OFFLINE ? 'wifi_off' : 'wifi'"></mat-icon>
+      <mat-icon *ngIf="lineStatus() === onlineStatusType.OFFLINE" ngClass="icon-offline" fontIcon="wifi_off"></mat-icon>
       
+
       <button mat-icon-button (click)="reloadCurrentPage()" aria-label="icon-button with a menu">
         <mat-icon>refresh</mat-icon>
       </button>

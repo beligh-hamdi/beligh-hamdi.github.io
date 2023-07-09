@@ -4,10 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --disable-host-check",
-    "copy": "node -e \"require('fs').copyFile('../docs/index.html', '../docs/404.html', (err) => console.log(err))\"",
+    "copy": "node -e \"require('fs').copyFile('./dist/beligh-hamdi/index.html', './dist/beligh-hamdi/404.html', (err) => console.log(err))\"",
+    "build": "ng build --configuration production --output-path=./dist/beligh-hamdi --base-href=https://beligh-hamdi.github.io/",
     "postbuild": "npm run copy",
-    "build": "ng build --output-path=../docs --base-href=https://beligh-hamdi.github.io/",
-    "build:prod": "ng build --configuration production --base-href=https://beligh-hamdi.github.io/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
