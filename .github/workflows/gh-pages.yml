@@ -23,11 +23,12 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    #- name: Run tests
-    #  run: npm run test:headless
+    - name: Run e2e tests
+      run: pm run e2e:headless
 
     - name: Build
       run: npm run build
+
 
     - name: Deploy
       if: success()

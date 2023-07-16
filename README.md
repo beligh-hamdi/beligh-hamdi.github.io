@@ -22,3 +22,14 @@ https://www.rx-angular.io
 Spring boot integration test with Cucumber and Jenkins pipeline
 
 https://mromeh.com/2017/12/04/spring-boot-integration-test-with-cucumber-and-jenkins-pipeline/
+
+
+No 
+❯ Cypress Y
+  Nightwatch 
+  WebdriverIO 
+
+For example:
+  Cypress: ng add @cypress/schematic
+  Nightwatch: ng add @nightwatch/schematics
+  WebdriverIO: ng add @wdio/schematics
