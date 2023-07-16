@@ -1,0 +1,36 @@
+<p>Transaction </p>
+
+<div class="table-responsive">
+
+    <table class="table table-striped table-bordered table-hover">
+    
+        <thead>
+          <tr>
+            <th scope="col">Date de transaction</th>
+            <th scope="col">Type de transaction</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Durée en sec/volume</th>
+            <th scope="col">Montant déduit</th>
+            <th scope="col">Compte</th>
+            <th scope="col">Solde restant</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of (items$ | async)">
+            <th scope="row">{{ item.dateTransaction}}</th>
+            <td>{{ item.typeTransaction }}</td>
+            <td>{{ item.destination }}</td> 
+            <td>{{ item.durationVolume }}</td>
+            <td>{{ item.amountDeducted }}</td>
+            <td>{{ item.packageName }}</td>
+            <td>{{ item.packageValue }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+</div>
+
+
+

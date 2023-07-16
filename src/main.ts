@@ -1,5 +1,5 @@
 import { environment } from './environments/environment';
-import { enableProdMode, isDevMode, importProvidersFrom } from '@angular/core';
+import { enableProdMode, isDevMode, importProvidersFrom, LOCALE_ID } from '@angular/core';
 import { AppComponent } from './app/app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -13,6 +13,13 @@ import { JwtInterceptor } from './app/shared/services/jwt.intercepter';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ApiCacheInterceptor } from '@services/api-cache.intercepter';
 import { SpinnerInterceptor } from '@app/shared/services/spinner.intercepter';
+
+
+import { registerLocaleData } from '@angular/common';
+import localeFrCa from '@angular/common/locales/fr-CA';
+import localeFrCaExtra from '@angular/common/locales/extra/fr-CA';
+
+registerLocaleData(localeFrCa, localeFrCaExtra);
 
 
 if (environment.production) {
@@ -32,6 +39,7 @@ bootstrapApplication(AppComponent, {
             // or after 30 seconds (whichever comes first).
             registrationStrategy: 'registerWhenStable:30000'
         })),
+        { provide: LOCALE_ID, useValue: 'fr-CA'},
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
         {

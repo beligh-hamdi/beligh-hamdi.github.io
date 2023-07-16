@@ -33,6 +33,10 @@ export class AppService {
     return this.http.get(`${environment.apiUrl}assets/data/blog/blog.json`);
   }
 
+  getTransactions(): Observable<any> {
+    return this.http.get(`${environment.apiUrl}assets/data/transaction.json`);
+  }
+
   getArticleDetails(id: number): Observable<any> {
     return this.getBlogArticles().pipe(
       map(item => item.articles),
