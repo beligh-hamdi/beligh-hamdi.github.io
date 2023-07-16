@@ -83,6 +83,11 @@ License: "MIT"
 
 
 --------------------------------------------------------------------------------
+Package: @angular/common
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
 Package: zone.js
 License: "MIT"
 
@@ -189,6 +194,21 @@ THE SOFTWARE.
 
 --------------------------------------------------------------------------------
 Package: @angular/forms
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
+Package: @angular/platform-browser
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
+Package: @angular/animations
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
+Package: @angular/router
 License: "MIT"
 
 
@@ -417,26 +437,6 @@ OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 --------------------------------------------------------------------------------
 Package: @angular/core
-License: "MIT"
-
-
---------------------------------------------------------------------------------
-Package: @angular/common
-License: "MIT"
-
-
---------------------------------------------------------------------------------
-Package: @angular/platform-browser
-License: "MIT"
-
-
---------------------------------------------------------------------------------
-Package: @angular/animations
-License: "MIT"
-
-
---------------------------------------------------------------------------------
-Package: @angular/router
 License: "MIT"
 
 
